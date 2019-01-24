@@ -14,7 +14,7 @@ import {
 
 export default jsonp
 
-function jsonp({url, data, opts = {}}) {
+function jsonp({url, data = {}, opts = {}}) {
 
   // 传入的选项与默认选项合并
   opts = deepMerge(options, opts)
