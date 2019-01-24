@@ -47,7 +47,7 @@ function jsonp({url, data, opts = {}}) {
         clearTimeout(timeoutTimerID)
         if (oldFn) window[jsonpCallbackName] = oldFn
       })
-      timeoutTimerID = setTimeout(() => {
+    timeoutTimerID = setTimeout(() => {
       reject('Jsonp request timeout')
     }, opts.timeout)
   })
